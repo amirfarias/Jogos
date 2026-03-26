@@ -4,7 +4,7 @@
 
 int main()
 {
-    //C È chato e n„o deixa eu colocar em baixo dos cases ent„o vai ficar aqui 
+    //C √© chato e n√£o deixa eu colocar em baixo dos cases ent√£o vai ficar aqui 
 	int jogar;
     int resposta;
     int j1, j2;
@@ -211,7 +211,9 @@ int main()
 			}
 			while(aberto[escolha - 1] == 1){
 				printf("Caixa ja aberta: ");
+				escolha = 0;
 				scanf("%d", &escolha);
+				while (getchar() != '\n');
 			}
 			
 			if(escolha == botao){
@@ -261,8 +263,10 @@ int main()
 				scanf("%d", &escolha);
 				while (getchar() != '\n');
 				while(aberto[escolha - 1] == 1){
+					escolha = 0;
 					printf("Caixa ja aberta: ");
 					scanf("%d", &escolha);
+					while (getchar() != '\n');
 				}
 				if(escolha == botao){
 					printf("%s FUGIU!\n", nomes[j2 - 1]);
